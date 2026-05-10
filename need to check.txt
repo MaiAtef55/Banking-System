@@ -1,0 +1,9 @@
+1- exception in name and address  done 
+2- edit customer doesn't work like what expected  done 
+3- transactions --> NEED TO CHECK no need to apply --> over engineering 
+4- DATABASE NEED TO BE CREATED IF IT'S REQUIRED -- > in progress   -->> Done 
+5-TAKE A TRIP TO A UINT TESTING FOR THE 5 OR 7 TESTS  Done 
+6- (NUM 4)--> SAVE IN FILE STREAM LIKE IN C # IF IT'S POSSSIBLE Db created and we need to keep it as it is 
+7- apply separation of concern to the services   in progress .....
+                                          |   |         |                  |
+                                   customer   Credits  bank statistics    certifications 

@@ -1,0 +1,122 @@
+# Banking System Skills
+
+# المطلوب تقنيًا
+
+المشروع هدفه إظهار:
+- OOP
+- MVVM
+- Database Design
+- Scalable Structure
+- Unit Testing and insure that which testing in valid and optimal in WPF and follow the kiss principal (keep it simple stupid) no need to crumple the project just do it with a simple way like a pro acting like a beginner 
+
+بدون تعقيد زائد.
+
+---
+
+# OOP
+
+لازم استخدام:
+- Encapsulation
+- Inheritance
+- Abstraction
+
+مثال:
+- Account => Base Class
+- SavingAccount => Derived Class
+- SalaryAccount => Derived Class
+
+---
+
+# MVVM
+
+## Model
+يمثل البيانات فقط.
+
+## ViewModel
+يحتوي على:
+- Commands
+- Bindings
+- UI Logic
+
+## View
+XAML فقط.
+
+ممنوع business logic داخل code-behind.
+
+---
+
+# Services
+
+اعمل Services بسيطة مثل:
+- CustomerService
+- AccountService
+- ReportingService
+- LoggingService
+
+---
+
+# Logging
+
+اعمل Text File Logger بسيط.
+
+مثال:
+[2026-05-08]
+Deposit Success
+Customer: Ahmed
+Amount: 5000
+
+---
+
+# Unit Testing
+
+اعمل Unit Tests للعمليات المهمة:
+- Deposit
+- Withdraw
+- Transfer
+- Certificate Validation
+- Credit Card Rules
+
+---
+
+# Database
+
+استخدم SQL Server.
+
+الجداول الأساسية:
+- Customers
+- Accounts
+- Transactions
+- Certificates
+- CreditCards
+
+---
+
+# Coding Rules
+
+- استخدم أسماء واضحة
+- قسم الكود بشكل بسيط
+- كل class له مسؤولية واحدة
+- لا تعمل over engineering
+
+---
+
+# ممنوعات
+
+- No CQRS
+- No MediatR
+- No Microservices
+- No Generic Repository overkill
+- No complicated architecture
+- No unnecessary abstraction
+- No extra features
+
+---
+
+# الهدف النهائي
+
+المشروع يجب أن يبدو:
+- منظم
+- بسيط
+- قابل للتوسعة
+- سهل الفهم
+- يحقق المطلوب فقط

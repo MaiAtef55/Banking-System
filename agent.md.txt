@@ -1,0 +1,165 @@
+# Banking System Agent
+
+أنت مهندس برمجيات مسؤول عن تنفيذ Banking System بسيط باستخدام:
+
+- WPF
+- MVVM
+- .NET Framework 4.7
+- SQL Server
+- OOP
+
+المطلوب تنفيذ المطلوب فقط بدون أي Features إضافية.
+
+مهم جدًا:
+- Keep It Simple Stupid (KISS)
+- لا تضيف أي functionality غير مطلوبة
+- لا تستخدم Clean Architecture معقدة
+- لا تستخدم CQRS
+- لا تستخدم MediatR
+- لا تستخدم Microservices
+- لا تستخدم Authentication
+- لا تستخدم APIs
+- لا تستخدم Dependency Injection frameworks
+- لا تستخدم أي design patterns زيادة عن المطلوب
+
+المشروع يجب تقسيمه إلى 3 مشاريع:
+
+1- BankingSystem.Core
+Class Library DLL
+يحتوي على:
+- Models
+- Services
+- Interfaces
+- Business Logic
+- Logging
+
+2- BankingSystem.WPF
+WPF EXE
+يحتوي على:
+- Views
+- ViewModels
+- Commands
+
+3- BankingSystem.Tests
+Unit Testing Project
+
+---
+
+# المطلوب تنفيذه فقط
+
+## Customers
+- Add Customer
+- Edit Customer
+- Close Customer
+
+العميل يحتوي على:
+- Name
+- Age
+- Gender
+- Address
+- National ID
+
+---
+
+## Accounts
+
+يوجد نوعين فقط:
+- Saving Account
+- Salary Account
+
+العميل يمكنه امتلاك أكثر من حساب.
+
+العمليات المطلوبة:
+- Deposit
+- Withdraw
+- Transfer
+
+---
+
+## Certificates
+
+الخصائص:
+- 1 year => 10%
+- 3 years => 15%
+- 5 years => 20%
+
+الشروط:
+- Minimum 1000
+- Multiple of 1000
+
+المطلوب:
+- Create
+- Update
+- Delete
+
+---
+
+## Credit Card
+
+الشروط:
+- مدة 10 سنوات
+- Limit من 50,000 إلى 250,000
+- كارت واحد فقط لكل عميل
+
+المطلوب:
+- Create
+- Update limit
+
+غير مسموح بالحذف.
+
+---
+
+## Reporting
+
+مطلوب:
+- Customer Report
+- Bank Statistics
+
+---
+
+## Logging
+
+اعمل Logging System بسيط باستخدام Text Files.
+
+يجب تسجيل:
+- Create Customer
+- Deposit
+- Withdraw
+- Transfer
+- Create Certificate
+- Update Credit Card
+
+---
+
+# قواعد مهمة
+
+- لا تكتب business logic داخل View
+- استخدم MVVM بشكل بسيط وواضح and explain in Arabic in the plan about what is the MVVM and why to use and when and is it required for every system built with WPF or it just for the architecture
+- استخدم ObservableCollection
+- استخدم ICommand
+- استخدم RelayCommand بسيط
+
+---
+
+# أسلوب الشرح المطلوب
+
+عند إنشاء أي جزء:
+1- اشرح الفكرة بالعربي
+2- اشرح ليه اتعمل كده
+3- اشرح العلاقات بين الكلاسات
+4- اشرح الـ flow
+5- ثم اكتب الكود
+
+---
+
+# ترتيب التنفيذ
+
+1- Models
+2- Services
+3- Logging
+4- Unit Tests
+5- Database
+6- WPF UI
+7- Reports
+
+لا تبدأ Task جديدة قبل إنهاء الحالية. 

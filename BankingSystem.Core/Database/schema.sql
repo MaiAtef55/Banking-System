@@ -1,0 +1,45 @@
+CREATE TABLE Customers (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Age INT NOT NULL,
+    Gender INT NOT NULL,
+    Address NVARCHAR(250) NOT NULL,
+    NationalId NVARCHAR(20) NOT NULL UNIQUE,
+    IsClosed BIT NOT NULL
+);
+
+CREATE TABLE Accounts (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    CustomerId UNIQUEIDENTIFIER NOT NULL,
+    AccountType INT NOT NULL,
+    Balance DECIMAL(18,2) NOT NULL,
+    CONSTRAINT FK_Accounts_Customers FOREIGN KEY (CustomerId) REFERENCES Customers(Id)
+);
+
+CREATE TABLE Transactions (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    CustomerId UNIQUEIDENTIFIER NOT NULL,
+    Action NVARCHAR(20) NOT NULL,
+    Amount DECIMAL(18,2) NOT NULL,
+    FromAccountId UNIQUEIDENTIFIER NOT NULL,
+    ToAccountId UNIQUEIDENTIFIER NULL,
+    OccurredAt DATETIME2 NOT NULL,
+    CONSTRAINT FK_Transactions_Customers FOREIGN KEY (CustomerId) REFERENCES Customers(Id)
+);
+
+CREATE TABLE Certificates (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    CustomerId UNIQUEIDENTIFIER NOT NULL,
+    PeriodYears INT NOT NULL,
+    Price DECIMAL(18,2) NOT NULL,
+    InterestRate DECIMAL(5,2) NOT NULL,
+    CONSTRAINT FK_Certificates_Customers FOREIGN KEY (CustomerId) REFERENCES Customers(Id)
+);
+
+CREATE TABLE CreditCards (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    CustomerId UNIQUEIDENTIFIER NOT NULL UNIQUE,
+    CashLimit INT NOT NULL,
+    ExpiryDate DATETIME2 NOT NULL,
+    CONSTRAINT FK_CreditCards_Customers FOREIGN KEY (CustomerId) REFERENCES Customers(Id)
+);
